@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="631.0" style="-fx-background-color: #37B7C3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FormularioTimeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#088395" height="315.0" layoutX="131.0" layoutY="102.0" stroke="#071952" strokeType="INSIDE" width="369.0" />
+      <TextField fx:id="txtNomeTimeFormTime" layoutX="233.0" layoutY="158.0" prefHeight="40.0" prefWidth="165.0" promptText="Nome do time" style="-fx-background-color: #EBF4F6;" />
+      <TextField fx:id="txtLigaFormTime" layoutX="233.0" layoutY="224.0" prefHeight="40.0" prefWidth="165.0" promptText="Liga" style="-fx-background-color: #EBF4F6;" />
+      <TextField fx:id="txtSiglaFormTime" layoutX="233.0" layoutY="292.0" prefHeight="40.0" prefWidth="165.0" promptText="Sigla" style="-fx-background-color: #EBF4F6;" />
+      <Button fx:id="btnSalvarTimeFormTime" layoutX="381.0" layoutY="381.0" mnemonicParsing="false" onAction="#btnSalvarTimeFormTimeOnAction" style="-fx-background-color: #ebf4f6;" text="Salvar" />
+      <Button fx:id="btnCancelarrTimeFormTime1" layoutX="436.0" layoutY="381.0" mnemonicParsing="false" onAction="#btnCancelarTimeFormTimeOnAction" style="-fx-background-color: #ebf4f6;" text="Voltar" />
+   </children>
+</AnchorPane>

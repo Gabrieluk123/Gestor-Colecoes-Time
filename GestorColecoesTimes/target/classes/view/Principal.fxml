@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="792.0" style="-fx-background-color: #37B7C3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <ToolBar layoutX="500.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #071952;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <Button fx:id="btnEditarPrincipal" mnemonicParsing="false" onAction="#btnEditarPrincipalOnAction" style="-fx-background-color: #EBF4F6;" text="Editar" />
+            <Button fx:id="btnExcluirPrincipal" mnemonicParsing="false" onAction="#btnExcluirPrincipalOnAction" style="-fx-background-color: #EBF4F6;" text="Excluir" />
+            <Label text="Pesquisar:" textFill="#ebf4f6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtPesquisarPrincipal" />
+            <Button fx:id="btnFazerPesquisaPrincipal" mnemonicParsing="false" onAction="#btnFazerPesquisaPrincipalOnAction" style="-fx-background-color: #EBF4F6;" text="Fazer pesquisa" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="tblTimesPrincipal" layoutY="40.0" prefHeight="760.0" prefWidth="358.0" style="-fx-background-color: #088395;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="tblColNomeDoTimePrincipal" prefWidth="165.0" text="Nome do Time" />
+            <TableColumn fx:id="tblColLigaPrincipal" prefWidth="120.0" text="Liga" />
+            <TableColumn fx:id="tblColSiglaPrincipal" prefWidth="75.0" text="Sigla" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnIncluirTimePrincipal" layoutX="617.0" layoutY="646.0" mnemonicParsing="false" onAction="#btnIncluirTimePrincipalOnAction" style="-fx-background-color: #EBF4F6;" text="Incluir time" />
+      <Button fx:id="btnVerCamisasPrincipal" layoutX="699.0" layoutY="646.0" mnemonicParsing="false" onAction="#btnVerCamisasPrincipalOnAction" style="-fx-background-color: #EBF4F6;" text="Ver camisas" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#071952" height="150.0" layoutX="484.0" layoutY="237.0" stroke="#088395" strokeType="INSIDE" width="200.0" />
+      <ImageView fitHeight="172.0" fitWidth="184.0" layoutX="498.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/colecoes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="445.0" layoutY="394.0" text="Gerenciador de Camisas" textAlignment="CENTER" textFill="#071952">
+         <font>
+            <Font name="Ink Free" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="533.0" layoutY="420.0" prefHeight="39.0" prefWidth="103.0" text="de Time" textAlignment="CENTER" textFill="#071952">
+         <font>
+            <Font name="Ink Free" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

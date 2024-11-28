@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #37B7C3;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TabelaCamisasController">
+   <children>
+      <ToolBar layoutX="500.0" layoutY="14.0" prefHeight="40.0" prefWidth="1200.0" style="-fx-background-color: #071952;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <Button fx:id="btnEditarTblCamisa" mnemonicParsing="false" onAction="#btnEditarTblCamisaOnAction" style="-fx-background-color: #EBF4F6;" text="Editar" />
+            <Button fx:id="btnExcluirTblCamisa" mnemonicParsing="false" onAction="#btnExcluirTblCamisaOnAction" style="-fx-background-color: #EBF4F6;" text="Excluir" />
+            <Label text="Pesquisar:" textFill="#ebf4f6">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtPesquisarTblCamisa" />
+            <Button fx:id="btnFazerPesquisaTblCamisa" mnemonicParsing="false" onAction="#btnFazerPesquisaTblCamisa" style="-fx-background-color: #EBF4F6;" text="Fazer pesquisa" />
+            <Button fx:id="btnEstatisticaTblCamisa" mnemonicParsing="false" onAction="#btnEstatisticaTblCamisaOnAction" style="-fx-background-color: #EBF4F6;" text="Ver estatística de camisas" />
+            <Label>
+               <padding>
+                  <Insets left="615.0" />
+               </padding>
+            </Label>
+        </items>
+      </ToolBar>
+      <TableView fx:id="tblCamisas" layoutY="40.0" onMouseClicked="#tblCamisasOnAction" prefHeight="760.0" prefWidth="546.0" style="-fx-background-color: #088395;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="40.0">
+        <columns>
+          <TableColumn fx:id="tblColNomedaCamisaTblCamisa" prefWidth="178.0" text="Nome da Camisa" />
+            <TableColumn fx:id="tblColMarcaTblCamisa" prefWidth="126.0" text="Marca" />
+            <TableColumn fx:id="tblColTemporadaTblCamisa" prefWidth="84.0" text="Temporada" />
+            <TableColumn fx:id="tblColTamanhoTblCamisa" prefWidth="73.0" text="Tamanho" />
+            <TableColumn fx:id="tblColPossuiTblCamisa" prefWidth="84.0" text="Possui" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#088395" height="398.0" layoutX="617.0" layoutY="192.0" stroke="#071952" strokeType="INSIDE" width="522.0" />
+      <Button fx:id="btnAddFotoCamisaTblCamisa" layoutX="662.0" layoutY="531.0" mnemonicParsing="false" onAction="#btnAddFotoCamisaTblCamisaOnAction" style="-fx-background-color: #ebf4f6;" text="Adicionar foto da camisa" />
+      <TextField fx:id="txtTamanhoTblCamisa" layoutX="653.0" layoutY="410.0" prefHeight="40.0" prefWidth="165.0" promptText="Tamanho" style="-fx-background-color: #EBF4F6;" />
+      <Button fx:id="btnSalvarCamisaTblCamisa" layoutX="1139.0" layoutY="757.0" mnemonicParsing="false" onAction="#btnSalvarCamisaTblCamisaOnAction" style="-fx-background-color: #ebf4f6;" text="Salvar" />
+      <CheckBox fx:id="chkBxSimCamisaTblCamisa" layoutX="715.0" layoutY="492.0" mnemonicParsing="false" text="Sim" textFill="#ebf4f6" />
+      <Label layoutX="697.0" layoutY="475.0" text="Possui camisa?" textFill="#ebf4f6" />
+      <TextField fx:id="txtTempTblCamisa" layoutX="653.0" layoutY="351.0" prefHeight="40.0" prefWidth="165.0" promptText="Temporada (Ex: 24/25)" style="-fx-background-color: #EBF4F6;" />
+      <TextField fx:id="txtMarcaTblCamisa" layoutX="653.0" layoutY="293.0" prefHeight="40.0" prefWidth="165.0" promptText="Marca" style="-fx-background-color: #EBF4F6;" />
+      <TextField fx:id="txtNomeCamisaTblCamisa" layoutX="653.0" layoutY="238.0" prefHeight="40.0" prefWidth="165.0" promptText="Nome da camisa" style="-fx-background-color: #EBF4F6;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebf4f6" height="243.0" layoutX="864.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="233.0" />
+      <Label layoutX="941.0" layoutY="384.0" text="Foto da camisa" />
+      <ImageView fx:id="imgViewTblCamisa" fitHeight="243.0" fitWidth="233.0" layoutX="864.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="btnVoltarCamisaTblCamisa" layoutX="964.0" layoutY="757.0" mnemonicParsing="false" onAction="#btnVoltarCamisaTblCamisaOnAction" style="-fx-background-color: #ebf4f6;" text="Voltar" />
+      <Button fx:id="btnZerarTblCamisa" layoutX="1031.0" layoutY="757.0" mnemonicParsing="false" onAction="#btnZerarTblCamisaOnAction" style="-fx-background-color: #ebf4f6;" text="Zerar Campos" />
+   </children>
+</AnchorPane>
